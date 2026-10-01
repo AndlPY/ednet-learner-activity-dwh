@@ -1,0 +1,8 @@
+logs/
+.venv*/
+.env
+dbt/target/
+dbt/logs/
+__pycache__/
+dbt/.user.yml
+.ipynb_checkpoints/
