@@ -1,0 +1,12 @@
+name: ednet_marts
+version: "1.0.0"
+config-version: 2
+profile: ednet
+model-paths: ["models"]
+test-paths: ["tests"]
+models:
+  ednet_marts:
+    marts:
+      +materialized: table
+      +grants:
+        select: ["analyst"]

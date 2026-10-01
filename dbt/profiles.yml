@@ -1,0 +1,13 @@
+# Облікові дані — зі змінних середовища; роль transformer читає core і пише в marts (п. 3.2 курсової).
+ednet:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: "{{ env_var('PGHOST', 'localhost') }}"
+      port: "{{ env_var('PGPORT', '5433') | int }}"
+      user: "{{ env_var('DBT_USER', 'postgres') }}"
+      password: "{{ env_var('DBT_PASSWORD', 'postgres') }}"
+      dbname: ednet
+      schema: marts
+      threads: 4
